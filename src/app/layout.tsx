@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "@next/font/google";
 import { Inter } from "next/font/google";
 import { Providers } from "../../context/redux.provider";
+import Header from "./components/Header";
 
 const monstserrat = Montserrat({
   weight: ["400", "700"],
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang='en'>
       <body className={`${monstserrat.className}  block items-center`}>
         <Providers>
+          <Header />
           {children}
         </Providers>
       </body>
