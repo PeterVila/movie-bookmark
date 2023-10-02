@@ -36,3 +36,5 @@ export interface MovieThunkProp {
   id: number;
   title: string;
 }
+
+

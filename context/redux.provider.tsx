@@ -1,5 +1,3 @@
-//redux.provider.tsx
-
 "use client";
 
 import { store } from "../redux/store";

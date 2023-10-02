@@ -5,7 +5,7 @@ export const store = configureStore({
   reducer: {
     bookmark: bookmarkReducer,
   },
-  middleware: getDefaultMiddleware =>
+ middleware: getDefaultMiddleware =>
     getDefaultMiddleware({
       serializableCheck: false,
     }),
