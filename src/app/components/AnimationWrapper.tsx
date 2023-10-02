@@ -20,4 +20,5 @@ const AnimatedWrapper = ({ children }: { children: ReactNode }) => {
     </motion.div>
   );
 };
+
 export default AnimatedWrapper;

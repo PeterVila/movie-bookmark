@@ -31,8 +31,13 @@ export const logout = createAsyncThunk("auth/logout", async () => {
 
 //Google sign-in
 export const googleSignIn = createAsyncThunk("auth/googleSignIn", async () => {
-  const googleAuthProvider = new GoogleAuthProvider();
-  await signInWithPopup(auth, googleAuthProvider);
+  try {
+    const googleAuthProvider = new GoogleAuthProvider();
+    await signInWithPopup(auth, googleAuthProvider);
+  } catch (error) {
+    console.error("Google Sign-In Error:", error);
+    throw error; // Rethrow the error to be handled by the Redux action
+  }
 });
 
 //add movies bookmarks
@@ -130,3 +135,4 @@ export const getBookmarksFromFirebaseDB = createAsyncThunk(
     }
   }
 );
+

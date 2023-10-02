@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { MovieThunkProp, UserProps } from "../../types/movie.type";
+import { MovieThunkProp } from "../../types/movie.type";
+import { UserProps } from "../../types/movie.type";
 
 
 interface BookMarkState {
